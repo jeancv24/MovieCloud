@@ -1,4 +1,38 @@
+/* Header */
+.header-links{
+    text-decoration: none;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    font-size: large;
+    color: #fff;
+}
+.header-links:hover{
+    color: #797979;
+    transition: all ease .2s;
+}
+.navBottons{
+    display: inline-block;
+    padding: 1em 4em 1em 4em;
+}
+header{
+    background-color: #5D4486;
+    margin-top: -2em;
+    /*position: fixed;*/
+}
+.main-logo{
+    width: 6em;
+    /*margin-right: 21em*/
+}
+.selected-nav{
+    background-color: #7861AA;
+}
+.selected-nav::after{
+    
+}
+/* Header */
+
+
 body{
-    background: #00aaff;
+    background: #fff;
     color: #0f0e0eb0;
 }
