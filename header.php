@@ -21,7 +21,7 @@
             <!-- nav -->
             <nav class="">
                 <ul class="d-flex bd-highlight mb-3">
-                    <a class="me-auto p-2 bd-highlight" href=""><img class="main-logo" src="http://moviecloud.test/wp-content/uploads/2022/04/2-e1650926648292.png" alt="simple logo"></a>
+                    <a class="me-auto p-2 bd-highlight" href=""><img class="main-logo" src="https://dev-peliresenas.pantheonsite.io/wp-content/uploads/2022/04/2-e1650994672260.png" alt="simple logo"></a>
                     <li class="navBottons selected-nav bd-highlight"><a class="header-links" href="#">Home</a></li>
                     <li class="navBottons bd-highlight"><a class="header-links" href="#">Top Best</a></li>
                     <li class="navBottons bd-highlight"><a class="header-links" href="#">My List</a></li>
