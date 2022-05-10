@@ -25,7 +25,7 @@
                     <li class="navBottons selected-nav bd-highlight"><a class="header-links" href="#">Home</a></li>
                     <li class="navBottons bd-highlight"><a class="header-links" href="#">Top Best</a></li>
                     <li class="navBottons bd-highlight"><a class="header-links" href="#">My List</a></li>
-                    <li class="navBottons bd-highlight"><a class="header-links" href="#">Trailer</a></li>
+                    <li class="navBottons bd-highlight"><a class="header-links" href="/trailers">Trailer</a></li>
                     <li class="navBottons bd-highlight"><a class="header-links" href="#">Login</a></li>
                 </ul>
             </nav>
