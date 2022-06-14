@@ -15,6 +15,11 @@ h1{
     color: #000000;
     text-align: center;
 }
+@media screen and (max-width: 650px) {
+    h1{
+        font-size: large;
+    }
+}
 /* Tags */
 
 /* Header */
@@ -39,8 +44,8 @@ h1{
 }
 header{
     background-color: #5D4486;
-    margin-top: -2em;
-    /*position: fixed;*/
+    /*margin-top: -2em;
+    position: fixed;*/
 }
 .main-logo{
     width: 6em;
@@ -52,6 +57,58 @@ header{
 .selected-nav::after{
     
 }
+/********************************/
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav li {
+    float: left;
+    padding: 17px 16px;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav li.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+    color: #fff;
+    margin: .8em .8em 0 2em;
+  }
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 650px) {
+    .topnav li:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 650px) {
+    .topnav.responsive {
+        position: relative;
+        padding-right: 5em;
+    }
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive li {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
 /* Header */
 
 /* Background Image - Search Section */
@@ -60,6 +117,16 @@ header{
     background-position: center;
     background-size: cover;
     padding: 17em;
+}
+@media screen and (max-width: 900px) {
+    .background{
+        padding: 9em;
+    }
+}
+@media screen and (max-width: 500px) {
+    .background{
+        padding: 2em 0;
+    }
 }
 
 .search-input{
@@ -70,6 +137,11 @@ header{
     border: none;
     border-radius: 17px 0 0 0;
     opacity: 80%;
+}
+@media screen and (max-width: 900px) {
+    .search-input{
+        width: 15em;
+    }
 }
 
 .search-button{
@@ -84,13 +156,13 @@ header{
 }
 
 .img-container{
-    margin: 0 10em 0;
+    margin: 0 5em 0;
     background-position: center;
 }
 
 .img {
-    height: 240px;
-    margin: 0 0 4em 0;
+    margin: 0 3em 4em 3em;
+    width: 250px;
   }
 
 /* Background Image - Search Section */
@@ -151,3 +223,28 @@ footer{
     color: #5D4486;
 }
 /*trailers*/
+
+/*topbest*/
+.img-topbest {
+    margin: 0 0em 4em 0.8em;
+    width: 200px;
+}
+.btn-topbest-container{
+    width: 50%;
+}
+.btn-topbest-container-down{
+    width: 70%;
+}
+.topbest-btn {
+    font-size: 1em;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    background: none;
+    color: #222121;
+    border: none;
+}
+.topbest-btn:hover{
+    background: #5D4486;
+    border-radius: 5em;
+}
+/*topbest*/
