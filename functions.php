@@ -1,5 +1,7 @@
 <?php 
 
+	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
     function load_assets(){
 
         //cargar BS
@@ -15,6 +17,8 @@
 
         //js
         wp_enqueue_script( 'main_js', get_template_directory_uri() . '/main.js');
+
+		wp_enqueue_script( 'scriptJquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
     }
 
     add_action('wp_enqueue_scripts', 'load_assets');
