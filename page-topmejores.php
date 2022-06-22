@@ -8,9 +8,9 @@
     
 
     <div class="btn-group mt-5 mb-5 btn-topbest-container" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary topbest-btn">Top Daily</button>
-        <button type="button" class="btn btn-primary topbest-btn">Top Favorite</button>
-        <button type="button" class="btn btn-primary topbest-btn">Top Score</button>
+        <button type="button" class="btn btn-primary topbest-btn">Top Diario</button>
+        <button type="button" class="btn btn-primary topbest-btn">Top Favoritas</button>
+        <button type="button" class="btn btn-primary topbest-btn">Top Puntaje</button>
     </div>
     <div class="img-container d-flex justify-content-center row">
         
@@ -24,9 +24,9 @@
     
     <div class="d-flex justify-content-center">
         <div class="btn-group mt-5 mb-5 btn-topbest-container-down" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary topbest-btn">Action</button>
-            <button type="button" class="btn btn-primary topbest-btn">Comedy</button>
-            <button type="button" class="btn btn-primary topbest-btn">Fantasy</button>
+            <button type="button" class="btn btn-primary topbest-btn">Acción</button>
+            <button type="button" class="btn btn-primary topbest-btn">Comedia</button>
+            <button type="button" class="btn btn-primary topbest-btn">Fantasia</button>
             <button type="button" class="btn btn-primary topbest-btn">Horror</button>
         </div>
     </div>
