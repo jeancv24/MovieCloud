@@ -26,12 +26,12 @@
             
             <tr class="movie-info" data-href="<?php the_permalink(); ?>">
                 <!-- imagen de link -->
-                <td data-label="Photo"> <button type="button" class="trailer-btn col-sm-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <td data-label="Photo"> <button type="button" class="trailer-btn col-sm-2" data-bs-toggle="modal" data-bs-target="#<?php the_field('id'); ?>">
                     <img src="<?php the_field('imagen'); ?>" class="img" alt="">
                 </button></td>
                 <!-- modal -->
                 <td data-label="Name">
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="<?php the_field('id'); ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header">
