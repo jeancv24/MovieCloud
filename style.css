@@ -15,43 +15,72 @@ h1{
     color: #000000;
     text-align: center;
 }
+@media screen and (max-width: 650px) {
+    h1{
+        font-size: large;
+    }
+}
 /* Tags */
 
 /* Header */
-
-.mb-3{
-    margin-bottom: 0 !important;
-}
-.header-links{
+.nav-link{
     text-decoration: none;
     font-family: 'Poppins',sans-serif;
     font-weight: 700;
     font-size: large;
     color: #fff;
+    margin-right: 4em;
 }
-.header-links:hover{
+.nav-link:hover{
     color: #797979;
     transition: all ease .2s;
 }
-.navBottons{
-    display: inline-block;
-    padding: 1em 4em 1em 4em;
-}
 header{
     background-color: #5D4486;
-    margin-top: -2em;
-    /*position: fixed;*/
 }
 .main-logo{
     width: 6em;
-    /*margin-right: 21em*/
 }
-.selected-nav{
-    background-color: #7861AA;
+.navbar-nav{
+    margin-left: 20%;
 }
-.selected-nav::after{
-    
+.collapse:not(.show) {
+    display: block;
 }
+/********************************/
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav li {
+    float: left;
+    padding: 17px 16px;
+}
+
+/* Add an active class to highlight the current page */
+.topnav li.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+    color: #fff;
+    margin: .8em .8em 0 2em;
+}
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 650px) {
+    .topnav li:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
 /* Header */
 
 /* Background Image - Search Section */
@@ -60,6 +89,16 @@ header{
     background-position: center;
     background-size: cover;
     padding: 17em;
+}
+@media screen and (max-width: 900px) {
+    .background{
+        padding: 9em;
+    }
+}
+@media screen and (max-width: 500px) {
+    .background{
+        padding: 2em 0;
+    }
 }
 
 .search-input{
@@ -70,6 +109,11 @@ header{
     border: none;
     border-radius: 17px 0 0 0;
     opacity: 80%;
+}
+@media screen and (max-width: 900px) {
+    .search-input{
+        width: 15em;
+    }
 }
 
 .search-button{
@@ -84,14 +128,17 @@ header{
 }
 
 .img-container{
-    margin: 0 10em 0;
+    margin: 0 5em 0;
     background-position: center;
 }
 
 .img {
-    height: 240px;
-    margin: 0 0 4em 0;
-  }
+    width: 250px;
+}
+.img-main-page-container{
+    margin: 0 3em 4em 3em;
+    width: 250px;
+}
 
 /* Background Image - Search Section */
 
@@ -143,6 +190,7 @@ footer{
 .trailer-btn{
     border: none;
     background: none;
+    margin: 0 3em 4em 3em;
 }
 .modal-title{
     font-family: 'Poppins',sans-serif;
@@ -151,3 +199,77 @@ footer{
     color: #5D4486;
 }
 /*trailers*/
+
+/*topbest*/
+.img-topbest {
+    margin: 0 0em 4em 0.8em;
+    width: 200px;
+}
+.btn-topbest-container{
+    width: 50%;
+}
+.btn-topbest-container-down{
+    width: 70%;
+}
+.topbest-btn {
+    font-size: 1em;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    background: none;
+    color: #222121;
+    border: none;
+}
+.topbest-btn:hover{
+    background: #5D4486;
+    border-radius: 5em;
+}
+/*topbest*/
+
+/*detalle*/
+.detalle-titulo {
+    margin: 1.8em 0 1.8em 0;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+    color: #fff;
+}
+.detalle-container {
+    margin: 5em 3em 5em 3em;
+    background-image: linear-gradient(#3c3053,rgb(158, 158, 158));
+    background-position: center;
+    background-size: cover;
+}
+.texto-detalle {
+    margin: 5em;
+    font-family: 'Poppins',sans-serif;
+    color: #fff;
+}
+.datos-detalle {
+    font-size: 0.8em;
+}
+.detalle-btn {
+    background: #5D4486;
+    border-radius: 5em;
+    width: 25%;
+    margin: auto;
+    border: none;
+}
+.detalle-btn:hover {
+    background: #3c3053;
+}
+.detalle-img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10em;
+    margin-bottom: 3em;
+}
+.rate-style {
+    background: #5D4486;
+    text-align: center;
+    font-size: 2.5em;
+    border-radius: 5em;
+    width: 10%;
+    margin: auto;
+    border: none;
+}
+/*detalle*/
