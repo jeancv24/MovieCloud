@@ -48,12 +48,7 @@
                         </div>
                     </div>
                 </td>
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
             </tr>
-        
         <?php endwhile; ?>
 
     <?php endif; wp_reset_postdata(); ?>
