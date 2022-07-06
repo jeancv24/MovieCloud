@@ -48,7 +48,10 @@
                         </div>
                     </div>
                 </td>
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
             </tr>
         
         <?php endwhile; ?>

@@ -1,11 +1,8 @@
 <?php get_header(); ?>
 
 <!-- search section -->
-<div class="background">
-    <fieldset>
-        <input class="search-input" type="text">
-        <button class="search-button">Search</button></span>
-    </fieldset>
+<div class="background d-flex justify-content-center row">
+    <h2 class="subtitle">Explore our wide movie catalog</h2>
 </div>
 <!-- search section -->
 
@@ -29,7 +26,11 @@
             <?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
                 
                 <tr class="movie-info" data-href="<?php the_permalink(); ?>">
+<<<<<<< Updated upstream
                     <td data-label="Photo"> <a class="col-sm-2 img-main-page-container" href="<?php the_permalink(); ?>"><img class="img" src="<?php the_field('imagen'); ?>"/></a></td>
+=======
+                    <td data-label="Photo"> <a class="col-sm-2 img-main-page-container" href="<?php the_permalink(); ?>"><img class="img" src="<?php the_field('imagen'); ?>" alt="post img"/></a></td>
+>>>>>>> Stashed changes
                 </tr>
             
             <?php endwhile; ?>

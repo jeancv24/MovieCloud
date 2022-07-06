@@ -85,10 +85,14 @@ header{
 
 /* Background Image - Search Section */
 .background{
-    background: url(img/background.jpg);
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url(img/background.jpg);
     background-position: center;
     background-size: cover;
     padding: 17em;
+    
 }
 @media screen and (max-width: 900px) {
     .background{
@@ -139,6 +143,16 @@ header{
     margin: 0 3em 4em 3em;
     width: 250px;
 }
+<<<<<<< Updated upstream
+=======
+
+.subtitle {
+    color: #fff;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+>>>>>>> Stashed changes
 
 /* Background Image - Search Section */
 
