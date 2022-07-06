@@ -40,10 +40,5 @@
     </div>
 
 </div>
-<<<<<<< Updated upstream
-<!-- content -->  
-=======
 <!-- content -->
->>>>>>> Stashed changes
-
 <?php get_footer(); ?>
