@@ -47,6 +47,11 @@ get_header(); ?>
             </div>
         </div>
     <?php endwhile; ?>
-    </div>
+</div>
+<h3 class="comments-title">Comments</h3>
+<?php 
+    $withcomments = "1";
+    comments_template(); // Get wp-comments.php template 
+?>
 <!-- content -->
 <?php get_footer(); ?>

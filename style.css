@@ -292,3 +292,81 @@ footer{
     border: none;
 }
 /*detalle*/
+
+/*comentarios*/
+#comments {
+    display: none;
+}
+#comment {
+    border-radius: 12px;
+    box-shadow:inset 2px 4px 4px 0px #898989;
+    height: 100px;
+    width: 400px;
+}
+.comments-title {
+    margin-left: 3em;
+    margin-bottom: 1em;
+    
+}
+.commentlist {
+    margin-left: 3em;
+}
+.submit {
+    background-color: #5D4486;
+    color: #fff;
+    border-radius: 18px;
+    padding: 8px;
+    border: none;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+}
+.comment-respond {
+    margin-left: 4em;
+}
+.logged-in-as {
+    display: none;
+}
+.comment-form-comment label {
+    display: none;
+}
+.commentlist li{
+    display: block;
+}
+.avatar {
+    border-radius: 20px;
+}
+.fn a {
+    font-family: 'Poppins',sans-serif;
+    text-decoration: none;
+    color: #000000;
+}
+.comment-reply-title a{
+    font-family: 'Poppins',sans-serif;
+    color: #5D4486;
+    font-size: 23px;
+    margin-right: 1em;
+}
+#cancel-comment-reply-link {
+    font-family: 'Poppins',sans-serif;
+    color: #5D4486;
+    font-size: 23px;
+}
+.comment-meta {
+    display: none;
+}
+.comment-body {
+    margin: 2em 0;
+}
+.comment-body p {
+    margin: 0;
+}
+.reply a {
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    color: #5D4486;
+}
+.reply a:hover {
+    font-weight: 700;
+    color: #5D4486;
+}
+/*comentarios*/
