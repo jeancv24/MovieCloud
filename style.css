@@ -287,9 +287,11 @@ footer{
     text-align: center;
     font-size: 2.5em;
     border-radius: 5em;
-    width: 60px;
+    width: 80px;
+    height: 80px;
     margin: auto;
     border: none;
+    padding-top: 8px;
 }
 /*detalle*/
 
