@@ -1,3 +1,4 @@
+
 <?php get_header(); ?>
 
 <!-- search section -->
@@ -16,13 +17,9 @@
             'post_type'      => 'page',
             'posts_per_page' => -1,
             'post_parent'    => $post->ID,
-            'orderby'          => array(
-                'meta_value_num',
-                'rate'
-            )
+            'orderby'          => 'rand'
         );
         $parent = new WP_Query( $args );
-        print_r($parent);
 
         if ( $parent->have_posts() ) : ?>
 
