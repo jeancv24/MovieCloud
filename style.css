@@ -191,6 +191,10 @@ footer{
     font-size: 2em;
     color: #5D4486;
 }
+.trailer-video {
+    width: 100%;
+    height: 720px;
+}
 /*trailers*/
 
 /*topbest*/
