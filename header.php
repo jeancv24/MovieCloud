@@ -38,7 +38,7 @@
                 <div class="container text-dark">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'theme-slug' ); ?>">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="40px" height="40px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1536 1280"><path fill="currentColor" d="M1536 1088v128q0 26-19 45t-45 19H64q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H64q-26 0-45-19T0 704V576q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H64q-26 0-45-19T0 192V64q0-26 19-45T64 0h1408q26 0 45 19t19 45z"/></svg></span>
                     </button>
                     <a class="me-auto p-2 bd-highlight" href="<?php bloginfo('url'); ?>"><img class="main-logo" src="https://dev-peliresenas.pantheonsite.io/wp-content/uploads/2022/04/2-e1650994672260.png" alt="simple logo"></a>
                     <?php

@@ -14,6 +14,7 @@ h1{
     font-weight: 500;
     color: #000000;
     text-align: center;
+    font-size: 3em;
 }
 @media screen and (max-width: 650px) {
     h1{
@@ -45,41 +46,21 @@ header{
     margin-left: 20%;
 }
 .collapse:not(.show) {
-    display: block;
-}
-/********************************/
-/* Add a black background color to the top navigation */
-.topnav {
-    overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav li {
-    float: left;
-    padding: 17px 16px;
-}
-
-/* Add an active class to highlight the current page */
-.topnav li.active {
-    background-color: #04AA6D;
-    color: white;
-}
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
     display: none;
+}
+.navbar-toggler-icon {
+    display: contents;
     color: #fff;
-    margin: .8em .8em 0 2em;
+    border: none;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
 }
 
-  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 650px) {
-    .topnav li:not(:first-child) {display: none;}
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-  }
+
+}
   
 /* Header */
 
@@ -156,6 +137,7 @@ header{
 footer{
     background-color: #222121;
     padding: 1em 4em 0 4em;
+    margin-bottom: -1em;
 }
 
 /*trailers*/
@@ -215,12 +197,13 @@ footer{
 .img-topbest {
     margin: 0 0em 4em 0.8em;
     width: 200px;
+    max-width: 200px;
 }
 .btn-topbest-container{
-    width: 50%;
+    width: 170px;
 }
 .btn-topbest-container-down{
-    width: 70%;
+    width: 170px;
 }
 .topbest-btn {
     font-size: 1em;
@@ -233,6 +216,11 @@ footer{
 .topbest-btn:hover{
     background: #5D4486;
     border-radius: 5em;
+}
+@media screen and (max-width: 650px) {
+    .btn-topbest-container-down{
+        width: auto;
+    }
 }
 /*topbest*/
 

@@ -4,16 +4,8 @@
 <!-- content -->
 
 <div class="img-container">
-
-    
-
-    <div class="btn-group mt-5 mb-5 btn-topbest-container" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary topbest-btn">Top Diario</button>
-        <button type="button" class="btn btn-primary topbest-btn">Top Favoritas</button>
-        <button type="button" class="btn btn-primary topbest-btn">Top Puntaje</button>
-    </div>
+    <h1>Top Recomendadas</h1>
     <div class="img-container d-flex justify-content-center row">
-        
         <img src="https://pics.filmaffinity.com/Nosotros-208891193-large.jpg" class="col-sm-2 img-topbest" alt="">
         <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/movie-poster-template-design-630d9d1e6c7be72d25bec9a52accc428_screen.jpg?ts=1636999242" class="col-sm-2 img-topbest" alt="">
         <img src="https://www.gamespot.com/a/uploads/original/1562/15626911/3776884-image%285%29.png" class="col-sm-2 img-topbest" alt="">
