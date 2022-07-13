@@ -24,7 +24,7 @@ get_header(); ?>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <iframe width="1280" height="720" src="<?php the_field('trailer'); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <iframe class="trailer-video" width="1280" height="720" src="<?php the_field('trailer'); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -51,7 +51,7 @@ get_header(); ?>
 <h3 class="comments-title">Comments</h3>
 <?php 
     $withcomments = "1";
-    comments_template(); // Get wp-comments.php template 
+    comments_template(); // Get wp-comments.php template
 ?>
 <!-- content -->
 <?php get_footer(); ?>
