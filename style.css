@@ -235,6 +235,20 @@ footer{
     background: #5D4486;
     border-radius: 5em;
 }
+.h2-mejores {
+    color: #5D4486;
+    font-size: 50px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+}
+.top-category-movie {
+    color: #5D4486;
+    font-size: 25px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 700;
+    margin-left: 0;
+    margin-bottom: 0em;
+}
 @media screen and (max-width: 650px) {
     .btn-topbest-container-down{
         width: auto;

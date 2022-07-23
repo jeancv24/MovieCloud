@@ -3,32 +3,52 @@
 
 <!-- content -->
 
-<div class="img-container">
+<div class="">
     <h1>Top Recomended</h1>
+<!-- content -->
     <div class="img-container d-flex justify-content-center row">
-        <img src="https://pics.filmaffinity.com/Nosotros-208891193-large.jpg" class="col-sm-2 img-topbest" alt="">
-        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/movie-poster-template-design-630d9d1e6c7be72d25bec9a52accc428_screen.jpg?ts=1636999242" class="col-sm-2 img-topbest" alt="">
-        <img src="https://www.gamespot.com/a/uploads/original/1562/15626911/3776884-image%285%29.png" class="col-sm-2 img-topbest" alt="">
-        <img src="https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg" class="col-sm-2 img-topbest" alt="">
-        <img src="https://sm.ign.com/t/ign_za/gallery/s/spider-man/spider-man-far-from-home-official-movie-posters_ex7e.1080.jpg" class="col-sm-2 img-topbest" alt="">
-    </div>
+        <?php 
+        
+        $args = array(
+            'post_type'      => 'page',
+            'posts_per_page' => -1,
+            'post_parent'    => $post->ID,
+            'orderby'          => 'rand'
+        );
+        $parent = new WP_Query( $args );
 
-    
-    <div class="d-flex justify-content-center">
-        <div class="btn-group mt-5 mb-5 btn-topbest-container-down" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary topbest-btn">Action</button>
-            <button type="button" class="btn btn-primary topbest-btn">Comedy</button>
-            <button type="button" class="btn btn-primary topbest-btn">Fantasy</button>
-            <button type="button" class="btn btn-primary topbest-btn">Horror</button>
-        </div>
-    </div>
-    <div class="img-container d-flex justify-content-center row">
-            
-        <img src="https://pics.filmaffinity.com/Nosotros-208891193-large.jpg" class="col-sm-2 img-topbest" alt="">
-        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/movie-poster-template-design-630d9d1e6c7be72d25bec9a52accc428_screen.jpg?ts=1636999242" class="col-sm-2 img-topbest" alt="">
-        <img src="https://www.gamespot.com/a/uploads/original/1562/15626911/3776884-image%285%29.png" class="col-sm-2 img-topbest" alt="">
-        <img src="https://i.pinimg.com/originals/bc/d5/c9/bcd5c9519581acc60bd60a429ab0c88f.jpg" class="col-sm-2 img-topbest" alt="">
-        <img src="https://sm.ign.com/t/ign_za/gallery/s/spider-man/spider-man-far-from-home-official-movie-posters_ex7e.1080.jpg" class="col-sm-2 img-topbest" alt="">
+        if ( $parent->have_posts() ) : ?>
+
+            <?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
+                <tr class="movie-info" data-href="<?php the_permalink(); ?>">
+                    <!-- imagen de link -->
+                    <td data-label="Photo"> <button type="button" class="trailer-btn col-sm-2" data-bs-toggle="modal" data-bs-target="#<?php the_field('id'); ?>">
+                        <p class="top-category-movie">Acción</p>
+                        <img src="<?php the_field('imagen'); ?>" class="img" alt="imagen">
+                    </button></td>
+                    <!-- modal -->
+                    <td data-label="Name">
+                        <div class="modal fade" id="<?php the_field('id'); ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Trailer</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <iframe class="trailer-video" width="1280" height="720" src="<?php the_field('link'); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            <?php endwhile; ?>
+
+        <?php endif; wp_reset_postdata(); ?>
     </div>
 
 </div>
