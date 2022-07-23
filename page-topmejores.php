@@ -23,7 +23,7 @@
                 <tr class="movie-info" data-href="<?php the_permalink(); ?>">
                     <!-- imagen de link -->
                     <td data-label="Photo"> <button type="button" class="trailer-btn col-sm-2" data-bs-toggle="modal" data-bs-target="#<?php the_field('id'); ?>">
-                        <p class="top-category-movie">Acción</p>
+                        <p class="top-category-movie"><?php the_field('category'); ?></p>
                         <img src="<?php the_field('imagen'); ?>" class="img" alt="imagen">
                     </button></td>
                     <!-- modal -->
