@@ -2,7 +2,7 @@
 
 
 <!-- content -->
-
+<body style="overflow-x:hidden">
 <div class="">
     <h1 class="mb-1 mt-4">Top Recomended</h1>
 <!-- content -->
