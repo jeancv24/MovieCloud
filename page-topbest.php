@@ -4,56 +4,72 @@
 <!-- content -->
 
 <div class="">
-    <h1>Top Recomended</h1>
+    <h1 class="mb-1 mt-4">Top Recomended</h1>
 <!-- content -->
-    <div class="img-container d-flex justify-content-center row">
-        <?php 
+<section class="cards-section">
+    <div class="container-fluid py-5 px-5 text-center">
+    <div class="d-flex justify-content-center">
+        <?php
+            $categories = get_categories( array(
+                'orderby' => 'name',
+                'order'   => 'ASC'
+            ) );
+ 
+            foreach( $categories as $category ) {
+                echo '<div class="col-md-4"><a class="btn btn-primary topbest-btn" href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></div>'; 
+            } 
+            ?>
+    </div>
+
+    <?php 
+        // the query
+        //get all post
+        $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1));
+
+        //get # of posts
+        //$wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>3));
+
+        //get posts from category
+        //$wpb_all_query = new WP_Query(array('category_name' => 'educacion', 'posts_per_page' =>-1));
+
+    ?>
         
-        $args = array(
-            'post_type'      => 'page',
-            'posts_per_page' => -1,
-            'post_parent'    => $post->ID,
-            'orderby'          => 'rand'
-        );
-        $parent = new WP_Query( $args );
-
-        if ( $parent->have_posts() ) : ?>
-
-            <?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
-                <tr class="movie-info" data-href="<?php the_permalink(); ?>">
-                    <!-- imagen de link -->
-                    <td data-label="Photo">
-                        <button type="button" class="top-btn col-sm-2" data-bs-toggle="modal" data-bs-target="#<?php the_field('id'); ?>">
-                            <p class="top-category-movie"><?php the_field('category'); ?></p>
-                            <img src="<?php the_field('imagen'); ?>" class="img" alt="imagen">
-                        </button>
-                    </td>
-                    <!-- modal -->
-                    <td data-label="Name">
-                        <div class="modal fade" id="<?php the_field('id'); ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Trailer</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <iframe class="trailer-video" width="1280" height="720" src="<?php the_field('link'); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <a class="btn btn-secondary top-linkDetalle" href="<?php the_field('linkdetalle'); ?>">Details</a>
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+        <?php if ( $wpb_all_query->have_posts() ) : ?>
+            
+            <section class="cards-section">
+                    <div class="container-fluid py-5 px-5 text-center">
+                        <div class="row justify-content-center">
+                        <!-- the loop -->
+                        <?php
+                            while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); 
+                            $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+                        ?>
+                            
+                            <div class="col-sm-12 col-md-6 col-lg-4 px-1">
+                                <div class="card card-01 mb-4  mx-auto">
+                                    <img class="card-img-top" src="<?php echo $featured_img_url; ?>" alt="peliculas">
+                                    <div class="card-body">
+                                        <p class="top-btn"><?php the_content(); ?></p>
                                     </div>
                                 </div>
                             </div>
+                            
+                        <?php endwhile; ?>
+                        <!-- end of the loop -->
                         </div>
-                    </td>
-                </tr>
-            <?php endwhile; ?>
+                    </div>
+            </section>
+            
+        <?php wp_reset_postdata(); ?>
+        
+        <?php else : ?>
+            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+        <?php endif; ?>
+        
+        
 
-        <?php endif; wp_reset_postdata(); ?>
     </div>
-
-</div>
+</section>
 <!-- content -->
 <?php get_footer(); ?>

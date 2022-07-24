@@ -220,13 +220,32 @@ footer{
 .btn-topbest-container{
     width: 170px;
 }
-.btn-topbest-container-down{
-    width: 170px;
+.top-btn a{
+    text-decoration: none;
+    color: #fff;
+    background: #5d4486;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    padding: 0.6em;
+    border-radius: 14px;
+    margin-top: 1px;
 }
-.top-btn {
-    border: none;
+.top-btn a:hover{
+    background: #3c3053;
+}
+.btn-primary:focus{
+    background: #5d4486;
+    box-shadow: none;
+}
+.topbest-btn {
+    font-size: 1em;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
     background: none;
-    margin: 0 3em 4em 3em;
+    color: #222121;
+    border: none;
+    border-radius: 5em;
+    padding: 0.5em 2em;
 }
 .topbest-btn:hover{
     background: #5D4486;

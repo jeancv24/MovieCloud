@@ -54,6 +54,6 @@
 
     <?php endif; wp_reset_postdata(); ?>
 </div>
-<!-- content -->  
+<!-- content -->
 
 <?php get_footer(); ?>
