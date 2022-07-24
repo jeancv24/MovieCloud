@@ -223,13 +223,10 @@ footer{
 .btn-topbest-container-down{
     width: 170px;
 }
-.topbest-btn {
-    font-size: 1em;
-    font-family: 'Poppins',sans-serif;
-    font-weight: 500;
-    background: none;
-    color: #222121;
+.top-btn {
     border: none;
+    background: none;
+    margin: 0 3em 4em 3em;
 }
 .topbest-btn:hover{
     background: #5D4486;
@@ -248,6 +245,9 @@ footer{
     font-weight: 700;
     margin-left: 0;
     margin-bottom: 0em;
+}
+.top-linkDetalle {
+    background-color: #5d4486;
 }
 @media screen and (max-width: 650px) {
     .btn-topbest-container-down{

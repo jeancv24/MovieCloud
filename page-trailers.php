@@ -42,6 +42,7 @@
                                     <iframe class="trailer-video" width="1280" height="720" src="<?php the_field('link'); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                                 <div class="modal-footer">
+                                    <a class="btn btn-secondary top-linkDetalle" href="<?php the_field('linkDetalle'); ?>">Detalles</a>
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                 </div>
                             </div>

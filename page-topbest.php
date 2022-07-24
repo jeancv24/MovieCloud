@@ -22,10 +22,12 @@
             <?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
                 <tr class="movie-info" data-href="<?php the_permalink(); ?>">
                     <!-- imagen de link -->
-                    <td data-label="Photo"> <button type="button" class="trailer-btn col-sm-2" data-bs-toggle="modal" data-bs-target="#<?php the_field('id'); ?>">
-                        <p class="top-category-movie"><?php the_field('category'); ?></p>
-                        <img src="<?php the_field('imagen'); ?>" class="img" alt="imagen">
-                    </button></td>
+                    <td data-label="Photo">
+                        <button type="button" class="top-btn col-sm-2" data-bs-toggle="modal" data-bs-target="#<?php the_field('id'); ?>">
+                            <p class="top-category-movie"><?php the_field('category'); ?></p>
+                            <img src="<?php the_field('imagen'); ?>" class="img" alt="imagen">
+                        </button>
+                    </td>
                     <!-- modal -->
                     <td data-label="Name">
                         <div class="modal fade" id="<?php the_field('id'); ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -39,6 +41,7 @@
                                         <iframe class="trailer-video" width="1280" height="720" src="<?php the_field('link'); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                     <div class="modal-footer">
+                                        <a class="btn btn-secondary top-linkDetalle" href="<?php the_field('linkDetalle'); ?>">Detalles</a>
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                     </div>
                                 </div>
