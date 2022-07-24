@@ -272,6 +272,9 @@ footer{
     .btn-topbest-container-down{
         width: auto;
     }
+    .container-categories {
+        display: block!important;
+    }
 }
 /*topbest*/
 

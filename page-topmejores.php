@@ -8,7 +8,7 @@
 <!-- content -->
 <section class="cards-section">
     <div class="container-fluid py-5 px-5 text-center">
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center container-categories">
         <?php
             $categories = get_categories( array(
                 'orderby' => 'name',
@@ -16,7 +16,7 @@
             ) );
  
             foreach( $categories as $category ) {
-                echo '<div class="col-md-4"><a class="btn btn-primary topbest-btn" href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></div>'; 
+                echo '<div class="col-md-2"><a class="btn btn-primary topbest-btn" href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></div>'; 
             } 
             ?>
     </div>
