@@ -26,7 +26,7 @@
             
             <tr class="movie-info" data-href="<?php the_permalink(); ?>">
                 <!-- imagen de link -->
-                <td data-label="Photo"> <button type="button" class="trailer-btn col-sm-2" data-bs-toggle="modal" data-bs-target="#<?php the_field('id'); ?>">
+                <td data-label="Photo"> <button type="button" class="trailer-btn col-sm-2" data-bs-toggle="modal" data-bs-target="<?php the_field('id'); ?>">
                     <img src="<?php the_field('imagen'); ?>" class="img" alt="">
                 </button></td>
                 <!-- modal -->
@@ -35,7 +35,7 @@
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Trailer</h5>
+                                    <h5 class="modal-title" id="h5.<?php the_field('id'); ?>">Trailer</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
